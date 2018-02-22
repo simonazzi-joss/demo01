@@ -42,15 +42,9 @@ var Persona = {
 	nat : 'IT'
 };
 
-var getRandomuser = function(nazione) {
-	var tmpP = Persona;
-
-	tmpP.nat = nazione;
-
-	return tmpP;
-};
-
+//jshint unused:false
 function extractRandomUser() {
+	'use strict';
 	var tmpP = Persona;
 	return tmpP;
 }
