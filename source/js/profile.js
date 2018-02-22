@@ -1,14 +1,11 @@
 /* globals $ */
+/* globals extractPersona */
 
 // jshint unused:false
 function caricaPagina() {
 	'use strict';
 
-	$.getJSON('https://randomuser.me/api/', function(data) {
-		var persona = data.results[0];
-
-		console.log( persona );
-
+	extractPersona( function(persona) {
 		$('#profileName').text( compactData(persona.name, ' ') );
 		$('#dataAddress').text( compactData(persona.location, ', ') );
 		$('#dataGender').text( persona.gender || 'ND' );
