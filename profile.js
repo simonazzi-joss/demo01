@@ -1,4 +1,8 @@
+/* globals extractRandomUser */
+
+// jshint unused:false
 function caricaPagina() {
+	'use strict';
 	var persona = extractRandomUser();
 
 	var header = document.getElementById('profileName');
@@ -21,6 +25,7 @@ function caricaPagina() {
 }
 
 function calcAge(strDate){
+	'use strict';
 	var today = new Date();
 	var dob = new Date(strDate);
 	var res = ( today.getFullYear() - dob.getFullYear() ) ;						//rimuovo 1 anno nel caso la persona non abbia ancora compiuto gli anni
@@ -29,17 +34,20 @@ function calcAge(strDate){
 	if( (today.getMonth() < dob.getMonth())	|| (today.getMonth() === dob.getMonth() && today.getDate() < dob.getDate()) ) {
 		res -= 1;
 	}
-	if(!isNaN(res))																//se vengono dati valori errati in input questo li puslisce
+	if(!isNaN(res)) {															//se vengono dati valori errati in input questo li puslisce
 		return res;
-	else
+	} else {
 		return 'ND';
+	}
 }
 
 function compactData(data, separator) {
+	'use strict';
 	var res = '';
 	for(var key in data) {
-		if(data[key])
-		 	res += data[key] + separator;
+		if(data[key]) {
+			res += data[key] + separator;
+		}
 	}
 	return res.slice(0, -separator.length);
 }
