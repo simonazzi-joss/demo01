@@ -5,7 +5,7 @@ var jshint = require('gulp-jshint');
 
 gulp.task('jshint', function() {
 	"use strict";
-	return gulp.src('source/*.js')
+	return gulp.src('source/js/*.js')
 		.pipe(jshint())
 		.pipe(jshint.reporter('jshint-stylish'));
 });
