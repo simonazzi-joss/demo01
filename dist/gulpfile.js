@@ -10,11 +10,11 @@ gulp.task('jshint', function() {
 		.pipe(jshint.reporter('jshint-stylish'));
 });
 
-gulp.task('moveFiles', function() {
+gulp.task('readyFile', function() {
 	"use strict";
-	gulp.src('source/*.html').pipe(gulp.dest('dist'));		//copia html
-	gulp.src('source/*.css').pipe(gulp.dest('dist'));		//copia css
-	gulp.src('source/*.js').pipe(gulp.dest('dist'));		//copia js
+	gulp.src('*.html').pipe(gulp.dest('dist'));		//copia html
+	gulp.src('*.css').pipe(gulp.dest('dist'));		//copia css
+	gulp.src('*.js').pipe(gulp.dest('dist'));		//copia js
 
-	gulp.src('source/img/*.*').pipe(gulp.dest('dist/img'));	//copia img
+	gulp.src('img/*.*').pipe(gulp.dest('dist/img'));
 });
