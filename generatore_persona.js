@@ -42,7 +42,6 @@ var Persona = {
 	nat : 'IT'
 };
 
-
 var getRandomuser = function(nazione) {
 	var tmpP = Persona;
 
@@ -50,8 +49,6 @@ var getRandomuser = function(nazione) {
 
 	return tmpP;
 };
-
-console.log( getRandomuser('EN') );
 
 function extractRandomUser() {
 	var tmpP = Persona;
