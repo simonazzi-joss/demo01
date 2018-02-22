@@ -11,6 +11,7 @@ main {
     position: relative;
     margin: 20px auto;
     width: 100%;
+    display: none;
 }
 header {
     background-color: #D61A46;
