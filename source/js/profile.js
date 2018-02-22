@@ -7,6 +7,8 @@ function caricaPagina() {
 	$.getJSON('https://randomuser.me/api/', function(data) {
 		var persona = data.results[0];
 
+		console.log( persona );
+
 		$('#profileName').text( compactData(persona.name, ' ') );
 		$('#dataAddress').text( compactData(persona.location, ', ') );
 		$('#dataGender').text( persona.gender || 'ND' );
@@ -15,6 +17,8 @@ function caricaPagina() {
 		$('#dataPhone').text( persona.phone || 'ND' );
 		$('#dataCell').text( persona.cell || 'ND' );
 		$('#profilePicture').attr('src', persona.picture.large );
+
+		$('main').fadeIn();
 	});
 }
 
