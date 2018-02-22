@@ -12,9 +12,9 @@ gulp.task('jshint', function() {
 
 gulp.task('moveFiles', function() {
 	"use strict";
-	gulp.src('source/*.html').pipe(gulp.dest('dist'));		//copia html
-	gulp.src('source/*.css').pipe(gulp.dest('dist'));		//copia css
-	gulp.src('source/*.js').pipe(gulp.dest('dist'));		//copia js
+	gulp.src('source/html/*.html').pipe(gulp.dest('dist/html'));	//copia html
+	gulp.src('source/css/*.css').pipe(gulp.dest('dist/css'));		//copia css
+	gulp.src('source/js/*.js').pipe(gulp.dest('dist/js'));			//copia js
 
-	gulp.src('source/img/*.*').pipe(gulp.dest('dist/img'));	//copia img
+	gulp.src('source/img/*.*').pipe(gulp.dest('dist/img'));			//copia img
 });
