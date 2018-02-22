@@ -1,27 +1,21 @@
-/* globals extractRandomUser */
+/* globals $ */
 
 // jshint unused:false
 function caricaPagina() {
 	'use strict';
-	var persona = extractRandomUser();
 
-	var header = document.getElementById('profileName');
-	var picture = document.getElementById('profilePicture');
-	var gender = document.getElementById('dataGender');
-	var address = document.getElementById('dataAddress');
-	var email = document.getElementById('dataEmail');
-	var age = document.getElementById('dataAge');
-	var phone = document.getElementById('dataPhone');
-	var cell = document.getElementById('dataCell');
+	$.getJSON('https://randomuser.me/api/', function(data) {
+		var persona = data.results[0];
 
-	header.innerText = compactData(persona.name, ' ');
-	address.innerText = compactData(persona.location, ', ');
-	gender.innerText = persona.gender || 'ND';
-	email.innerText = persona.email || 'ND';
-	age.innerText = calcAge( persona.dob );
-	phone.innerText = persona.phone || 'ND';
-	cell.innerText = persona.cell || 'ND';
-	picture.src = persona.picture.large || 'img/blank.jpg';
+		$('#profileName').text(compactData(persona.name, ' ') );
+		$('#dataAddress').text( compactData(persona.location, ', ') );
+		$('#dataGender').text( persona.gender || 'ND' );
+		$('#dataEmail').text( persona.email || 'ND' );
+		$('#dataAge').text( calcAge( persona.dob ) );
+		$('#dataPhone').text( persona.phone || 'ND' );
+		$('#dataCell').text( persona.cell || 'ND' );
+		$('#profilePicture').attr('src', persona.picture.large );
+	});
 }
 
 function calcAge(strDate){
