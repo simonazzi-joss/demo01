@@ -8,7 +8,6 @@ body {
 }
 main {
     clear: both;
-    position: relative;
     margin: 20px auto;
     width: 100%;
 }
@@ -41,7 +40,10 @@ nav a:hover {
     margin-bottom: 0;
     border-bottom: 5px solid #F7D4DC;
 }
-
+footer {
+    background-color: black;
+    height: 150px;
+}
 .profile {
     margin: 20px auto;
     content: "";
@@ -55,7 +57,6 @@ nav a:hover {
 .profilePic {
     padding: 10px 20px;
     text-align: center;
-    width: 170px;
     margin: auto;
 }
 .profilePic > img {
@@ -63,20 +64,24 @@ nav a:hover {
     border-radius: 100px;
     padding: 1px;
     border: 3px solid #D61A46;
+    height: 136px;
 }
 .socialLinks {
     margin-top: 20px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
 }
 .socialLinks > a {
     text-decoration: none;
+    margin: 10px;
 }
 .socialLinks > a > img {
-    height: 30px;
+    height: 60px;
 }
 .profileData {
     padding: 10px;
-    position: relative;
     overflow: auto;
     flex-grow: 1;
 }
@@ -84,13 +89,14 @@ nav a:hover {
     display: flex;
 }
 .itmDesc {
-    width: 100px;
     flex-grow: 1;
+    max-width: 100px;
 }
 .itmVal {
     flex-grow: 2;
     text-align: right;
     padding-left: 5px;
+    max-width: 300px;
 }
 
 /*css per la pagina contatta.html*/
