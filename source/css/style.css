@@ -25,8 +25,8 @@ nav {
     text-align: center;
     content: "";
     clear: both;
-    display: table;
-    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 nav a {
     width: 90px;
@@ -46,14 +46,15 @@ nav a:hover {
     margin: 20px auto;
     content: "";
     clear: both;
-    display: table;
     background-color: #FC7307;
     padding: 10px;
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .profilePic {
     padding: 10px 20px;
     text-align: center;
-    float: left;
     width: 170px;
     margin: auto;
 }
@@ -76,16 +77,19 @@ nav a:hover {
 .profileData {
     padding: 10px;
     position: relative;
-    float: left;
     overflow: auto;
+    flex-grow: 1;
+}
+.profileData > article {
+    display: flex;
 }
 .itmDesc {
-    width: 30%;
-    float: left;
+    width: 100px;
+    flex-grow: 1;
 }
 .itmVal {
-    width: 69%;
-    float: left;
+    flex-grow: 2;
+    text-align: right;
 }
 
 /*css per la pagina contatta.html*/
@@ -99,7 +103,7 @@ nav a:hover {
     padding: 10px;
 }
 .form-footer {
-    margin-left: 106px;
+    margin-left: 100px;
 }
 .form-footer input {
     padding: 15px;
@@ -123,33 +127,37 @@ nav a:hover {
     background-color: #5f5f5f;
 }
 .form {
-    width: 60%;
     margin: 20px auto;
-    padding: 30px;
+    content: "";
+    clear: both;
     background-color: #FC7307;
-    overflow: auto;
+    padding: 20px;
+    max-width: 600px;
 }
-.form table tr td:first-child {
-    width: 100px;
+.formBody {
+    width: 100%;
     margin-bottom: 5px;
     line-height: 20px;
     text-align: center;
     padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
 }
-.form table input {
+.formBody > article {
+    display: flex;
     width: 100%;
+}
+.formBody > article > label {
+    width: 100px;
+}
+.formBody > article > input, textArea {
+    flex-grow: 2;
     margin-bottom: 5px;
-    display: block;   
     line-height: 30px;
     font-size: 1em;
     border: 1px solid #a51a1a;
 }
-.form table textarea {
-    width: 100%;
-    height: 100px;
-    margin-bottom: 5px;
-    display: block;
-    font-size: 1em;
+textArea {
     resize: none;
-    border: 1px solid #a51a1a;
+    height: 100px;
 }
