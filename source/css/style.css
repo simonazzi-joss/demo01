@@ -76,9 +76,15 @@ footer {
 .socialLinks > a {
     text-decoration: none;
     margin: 10px;
+    padding: 2px;
+}
+.socialLinks >a:hover{
+    padding: 1px;
+    border: 1px solid white;
 }
 .socialLinks > a > img {
     height: 60px;
+    margin-bottom: -5px;
 }
 .profileData {
     padding: 10px;
@@ -156,6 +162,7 @@ footer {
 }
 .formBody > article > label {
     width: 100px;
+    margin-top: 6px;
 }
 .formBody > article > input, textArea {
     flex-grow: 2;
