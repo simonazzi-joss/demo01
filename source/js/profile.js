@@ -15,7 +15,7 @@ function caricaPagina() {
 		$('#dataCell').text( persona.cell || 'ND' );
 		$('#profilePicture').attr('src', persona.picture.large );
 
-		$('main').slideDown();
+		$('main').slideDown(200);
 	});
 }
 

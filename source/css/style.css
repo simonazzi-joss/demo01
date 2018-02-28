@@ -2,6 +2,9 @@
     color: black;
     font-family: verdana arial sans-serif;
 }
+a {
+    text-decoration: none;
+}
 body {
     background-color: #F7D4DC;
     font-size: 1.2em;
@@ -44,6 +47,12 @@ footer {
     background-color: black;
     height: 150px;
 }
+.footer-title {
+	padding-top: 5px;
+	color: white;
+	text-align: center;
+	margin-bottom: 10px;
+}
 .profile {
     margin: 20px auto;
     content: "";
@@ -67,14 +76,11 @@ footer {
     height: 136px;
 }
 .socialLinks {
-    margin-top: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 30px;
 }
 .socialLinks > a {
-    text-decoration: none;
     margin: 10px;
     padding: 2px;
 }
